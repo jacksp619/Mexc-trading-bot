@@ -106,7 +106,7 @@ async function runBot() {
   await placeOrder(price, qty);
 }
 
-
+runBot();
 
 
 
