@@ -22,8 +22,6 @@ if (responseData.success && responseData.data && responseData.data.assets) {
   console.error("Error fetching balance:", responseData.message || "Unexpected response format");
 }
 
-}
-
 function signRequest(method, path, timestamp, body = '') {
   const prehash = `${method}${path}${timestamp}${body}`;
   return crypto
