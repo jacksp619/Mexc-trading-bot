@@ -1,8 +1,8 @@
 const axios = require('axios');
 const crypto = require('crypto');
 
-const API_KEY = process.env.mx0vglrIUyZVqJBoUB;
-const API_SECRET = process.env.9948036bae6641c596011c0dfe8cc5d4;
+const API_KEY = process.env.API_KEY;
+const API_SECRET = process.env.API_SECRET;
 const BASE_URL = 'https://contract.mexc.com';
 
 const SYMBOL = 'BTC_USDT';
