@@ -108,3 +108,8 @@ async function runBot() {
 
 // Kick off the bot
 runBot();
+git add index.js
+git commit -m "Added working bot code"
+git push
+
+  
