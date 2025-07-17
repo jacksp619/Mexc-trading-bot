@@ -1,8 +1,8 @@
 const axios = require('axios');
 const crypto = require('crypto');
 
-const API_KEY = process.env.MEXC_API_KEY;
-const API_SECRET = process.env.MEXC_API_SECRET;
+const API_KEY = process.env.mx0vglrIUyZVqJBoUB;
+const API_SECRET = process.env.9948036bae6641c596011c0dfe8cc5d4;
 const BASE_URL = 'https://contract.mexc.com';
 
 const SYMBOL = 'BTC_USDT';
@@ -101,8 +101,10 @@ async function runBot() {
   }
 
   const qty = (balance / price).toFixed(3);
-  console.log(`Placing order with qty: ${qty} at price: ${price}`);
+
+  console.log(`Placing order at ${price} with quantity ${qty}`);
   await placeOrder(price, qty);
 }
 
+// Kick off the bot
 runBot();
