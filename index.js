@@ -12,14 +12,16 @@ const SL = 0.02; // 2% Stop Loss
 
 async function fetchPrice() {
   try {
-    const res = await axios.get(`${BASE_URL}/api/v1/contract/ticker?symbol=${SYMBOL}`);
-    const price = parseFloat(res.data.data.lastPrice || res.data.data.last_price);
-    console.log(`Market price: ${price}`);
-    return price;
-  } catch (err) {
-    console.error('Error fetching price:', err.response?.data || err.message);
-    return null;
-  }
+    const response = await axios.get(balanceUrl, { headers });
+const responseData = response.data;
+
+if (responseData.success && responseData.data && responseData.data.assets) {
+  const balance = responseData.data.assets.find(asset => asset.currency === 'USDT');
+  console.log("USDT balance:", balance?.available);
+} else {
+  console.error("Error fetching balance:", responseData.message || "Unexpected response format");
+}
+
 }
 
 function signRequest(method, path, timestamp, body = '') {
