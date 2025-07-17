@@ -107,10 +107,6 @@ async function runBot() {
 }
 
 
-runBot();
-git add index.js
-git commit -m "Remove git command from index.js"
-git push
 
 
 
